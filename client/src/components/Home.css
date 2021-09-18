@@ -1,0 +1,41 @@
+.parent {
+    display: grid;
+    grid-template-rows: 100px 600px 100px;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding-top: 30px;
+  }
+.parent {
+    display: grid;
+    grid-template-areas:
+      "H F A A"
+      "H F A A"
+      "H F A A";
+  }
+  #two {
+    grid-area: H;
+  }
+  
+  #three {
+    grid-area: F;
+  }
+  
+  #four {
+    grid-area: A;
+  }
+  
+  #two {
+    background-color: white;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtVCqGqb0YWcURkj-BpAD3HtwiadJeIEhtg&usqp=CAU");
+    background-repeat: space;
+    
+    
+  }
+  
+  #three {
+    background-color: #000022;
+    color: white;
+  }
+  
+  #four {
+    background-color: #DE3C4B;
+  }

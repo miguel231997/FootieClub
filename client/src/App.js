@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Feed from './components/Feed';
+import Post from './components/Post';
+import { Route } from'react-router-dom';
 
+console.log(process.env.REACT_APP_AIRTABLE_KEY)
+console.log(process.env.REACT_APP_AIRTABLE_BASE)
 function App() {
   return (
+
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+        <Route exact path = "/">
+          <Home/>
+        </Route>
+        <Route exact path = "/feeds">
+          <Feed/>
+        </Route>
+        <Route path = "/new">
+          <Post/>
+        </Route>
+      
+        
     </div>
   );
 }
