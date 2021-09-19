@@ -26,7 +26,7 @@ export default function Feed() {
     };
 
     fetchUsers();
-  }, []);
+}, []);
 
 return (
     <div>

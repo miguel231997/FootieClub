@@ -5,3 +5,18 @@
 #name{
     display: flex;
 }
+
+.navbar{
+    padding: 30px;
+}
+
+.logo-name{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-name h1{
+    font-size: 25px;
+    color: #357EDD;
+}
+
