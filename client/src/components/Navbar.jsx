@@ -13,9 +13,9 @@ return (
                         </div>
                     </form>
                 <div>
-                    <Link to = "/" className="link dim gray    f6 f5-ns dib mr3" href="#" title="Home">Home</Link>
-                    <Link to ="/feeds" className="link dim gray    f6 f5-ns dib mr3" href="#" title="About">Feed</Link>
-                    <Link to ="/new" className="link dim gray    f6 f5-ns dib mr3" href="#" title="Store">Post</Link>
+                    <Link to = "/" className="link dim gray f6 f5-ns dib mr3" href="#" title="Home">Home</Link>
+                    <Link to ="/feeds" className="link dim gray f6 f5-ns dib mr3" href="#" title="About">Feed</Link>
+                    <Link to ="/new" className="link dim gray f6 f5-ns dib mr3" href="#" title="Store">Post</Link>
                 </div>
             </div>
     </nav>
