@@ -1,7 +1,7 @@
 import './Home.css';
 import logo from './logo.png';
 import 'react-slideshow-image/dist/styles.css';
-import Feed from './Feed';
+//import Feed from './Feed';
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
                 </div>
             <div className="child" id="three">
                 <div>
-                    <Feed />
+                    {/* <Feed /> */}
                  </div>
             </div>
             <div className="child" id="four">

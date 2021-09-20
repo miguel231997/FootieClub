@@ -6,6 +6,7 @@ import Post from './components/Post';
 import PostDetails from './components/PostDetails'
 import EditPost from './components/EditPost'
 import { Route } from'react-router-dom';
+import Search from './components/Search';
 
 console.log(process.env.REACT_APP_AIRTABLE_KEY)
 console.log(process.env.REACT_APP_AIRTABLE_BASE)
