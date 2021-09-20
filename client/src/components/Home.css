@@ -25,8 +25,7 @@
   
   #two {
     background-color: white;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtVCqGqb0YWcURkj-BpAD3HtwiadJeIEhtg&usqp=CAU");
-    background-repeat: space;
+    
     
     
   }
@@ -38,4 +37,13 @@
   
   #four {
     background-color: #DE3C4B;
+  }
+
+  #logo{
+    width: 200px;
+    height: 200px;
+  }
+
+  #footie{
+    padding-top: 0px;
   }

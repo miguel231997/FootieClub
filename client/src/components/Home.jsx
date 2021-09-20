@@ -1,12 +1,14 @@
 import './Home.css';
+import logo from './logo.png';
 import 'react-slideshow-image/dist/styles.css';
 import { Link } from "react-router-dom";
 
 function Home() {
     return (
         <div className="parent">
-                <div className="child" id="two">
-                <h3>Footie Around The World</h3>
+            <div className="child" id="two">
+                <img id="logo" src ={logo} />
+                <h3 id="footie">Footie Around The World</h3>
                 <div><a href="#" class="link underline blue hover-orange">English Premier League</a></div>
                 <div><a href="#" class="link underline blue hover-orange">La Liga</a></div>
                 <div><a href="#" class="link underline blue hover-orange">Champions League</a></div>

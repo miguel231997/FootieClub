@@ -1,22 +1,23 @@
-.flex{
-    display:flex;
-    justify-content: center;
-}
-#name{
-    display: flex;
-}
-
 .navbar{
-    padding: 30px;
-}
-
-.logo-name{
+    position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.logo-name h1{
-    font-size: 25px;
-    color: #357EDD;
+.form{
+    width: 700px;
 }
 
+@media only screen and (max-width: 600px) {
+    .form{
+        width: 350px;
+    }
+  }
+
+  @media(max-width: 320px){ 
+    .navbar{
+        background: black;
+    }
+  }
+  
