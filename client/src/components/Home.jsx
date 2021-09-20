@@ -1,7 +1,7 @@
 import './Home.css';
 import logo from './logo.png';
 import 'react-slideshow-image/dist/styles.css';
-//import Feed from './Feed';
+import Feed from './Feed';
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
             <div className="child" id="two">
                 <img id="logo" src ={logo} />
                 
-                <div class="vertical-menu">
+                <div className="vertical-menu">
                     <Link to = "/" className="link" href="#" title="Home">Home</Link>
                     <Link to ="/feeds" href="#" title="About">Feed</Link>
                     <Link to ="/new"  href="#" title="Store">Post</Link>
@@ -24,7 +24,7 @@ function Home() {
                 </div>
             <div className="child" id="three">
                 <div>
-                    {/* <Feed /> */}
+                    <Feed />
                  </div>
             </div>
             <div className="child" id="four">

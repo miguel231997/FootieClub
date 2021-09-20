@@ -1,47 +1,30 @@
-import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import thumbsup from './thumbsup.png'
 import './Feed.css';
 import edit from './edit.png';
 
+function Search(props){
 
-const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
-const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-const URL = `https://api.airtable.com/v0/${airtableBase}/Users`;
-
-const config = {
-  headers: {
-    Authorization: `Bearer ${airtableKey}`,
-  },
-};
-
-function Search(){
-
-    const [users, setUsers] = useState([]);
-    const [searchField,SetSearchField] = useState('');
     const [filterUsers, setFilterUsers] = useState([]);
 
-    useEffect(() => {
-      const fetchUsers = async () => {
-        const res = await axios.get(URL, config);
-        setUsers(res.data.records);
-        console.log(res.data)
-      };
-  
-      fetchUsers();
-  }, []);
 
   useEffect(() => {
-    const filteredPost = users.filter((user) => user.fields.firstname.includes(searchField));
-    setFilterUsers(filteredPost);
-  },[searchField])
+    const filteredPost = props.users.filter((user) => user.fields.firstname.includes(props.searchField));
+    console.log("filtered post: ", filteredPost)
+    if(props.searchField.length === 0){
+        setFilterUsers([]);
+    }else{
+        
+        setFilterUsers(filteredPost);
+    }
+     //setFilterUsers(filteredPost);
+  },[props.searchField])
 
 
     return(
         <div>
-            <SearchBar searchField={searchField} SetSearchField={SetSearchField}/>
+        
             {filterUsers.map((user)=>{
                 return (
                     <div className="post-container">
