@@ -24,15 +24,15 @@
   }
   
   #two {
-    background-color: white;
+    background-color: #eee;
     
     
     
   }
   
   #three {
-    background-color: #000022;
-    color: white;
+    background-color: #eee;
+    color: black;
   }
   
   #four {
@@ -42,8 +42,42 @@
   #logo{
     width: 200px;
     height: 200px;
+
   }
 
-  #footie{
-    padding-top: 0px;
+  
+  
+  .vertical-menu a {
+
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: white; /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu .link {
+    background-color: #04AA6D; /* Add a green color to the "active/current" link */
+    color: black;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #logo{
+        width: 100px;
+        height: 100px;
+    }
+    #four{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 320px){ 
+    #logo{
+      width: 50px;
+      height: 50px;
+    }
   }

@@ -1,6 +1,7 @@
 import './Home.css';
 import logo from './logo.png';
 import 'react-slideshow-image/dist/styles.css';
+import Feed from './Feed';
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -8,19 +9,22 @@ function Home() {
         <div className="parent">
             <div className="child" id="two">
                 <img id="logo" src ={logo} />
-                <h3 id="footie">Footie Around The World</h3>
-                <div><a href="#" class="link underline blue hover-orange">English Premier League</a></div>
-                <div><a href="#" class="link underline blue hover-orange">La Liga</a></div>
-                <div><a href="#" class="link underline blue hover-orange">Champions League</a></div>
-                <div>
-                        <Link to = "/" className="link dim gray f6 f5-ns dib mr3" href="#" title="Home">Home</Link>
-                        <Link to ="/feeds" className="link dim gray f6 f5-ns dib mr3" href="#" title="About">Feed</Link>
-                        <Link to ="/new" className="link dim gray f6 f5-ns dib mr3" href="#" title="Store">Post</Link>
-                    </div> 
+                
+                <div class="vertical-menu">
+                    <Link to = "/" className="link" href="#" title="Home">Home</Link>
+                    <Link to ="/feeds" href="#" title="About">Feed</Link>
+                    <Link to ="/new"  href="#" title="Store">Post</Link>
+                    <a href="#" class="active">EPL</a>
+                    <a href="#">Serie A</a>
+                    <a href="#">La Liga</a>
+                    <a href="#">UCL</a>
+                    <a href="#">Ligue 1</a>
+                </div>
+                
                 </div>
             <div className="child" id="three">
                 <div>
-                    3
+                    <Feed />
                  </div>
             </div>
             <div className="child" id="four">
