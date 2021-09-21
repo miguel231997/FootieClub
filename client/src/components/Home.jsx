@@ -7,6 +7,7 @@ import Search from './Search';
 import { Link } from "react-router-dom";
 import Accounts from './Accounts';
 import Photos from './Photos';
+import add from './add.png'
 
 function Home(props) {
     return (
@@ -29,6 +30,7 @@ function Home(props) {
             <div className="child" id="three">
                 <div>
                 {/* <Search users={props.users} searchField={props.searchField}/> */}
+                <img id="add" src ={add} />
                 <Photos users={props.users} />
                  </div>
             </div>
