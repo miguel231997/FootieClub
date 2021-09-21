@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 //import thumbsup from './thumbsup.png'
 import Form from "./Form";
+import Search from "./Search";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -14,7 +15,7 @@ const config = {
   },
 };
 
-function Post(){
+function Post(props){
     const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [favoriteteam, setFavoriteTeam] = useState("");
@@ -40,6 +41,7 @@ function Post(){
 
   return (
     <div>
+      <Search users={props.users} searchField={props.searchField}/>
       <h3>Create a new post</h3>
       <Form
         firstname={firstname}

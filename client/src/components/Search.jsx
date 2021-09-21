@@ -10,8 +10,7 @@ function Search(props){
 
 
   useEffect(() => {
-    const filteredPost = props.users.filter((user) => user.fields.firstname.includes(props.searchField));
-    console.log("filtered post: ", filteredPost)
+    const filteredPost = props.users.filter((user) => user.fields?.firstname.toLowerCase().includes(props.searchField.toLowerCase()));
     if(props.searchField.length === 0){
         setFilterUsers([]);
     }else{
@@ -24,10 +23,9 @@ function Search(props){
 
     return(
         <div>
-        
             {filterUsers.map((user)=>{
                 return (
-                    <div className="post-container">
+            <div className="post-container">
               <div className="posts">
                 <div className="information">
                   <img className ="avatar" src={user.fields.profilepic} alt="profile pic"></img>
@@ -51,6 +49,7 @@ function Search(props){
                     </div>
                   </div>
                 </div>
+                
               </div>
                 )
             }) }

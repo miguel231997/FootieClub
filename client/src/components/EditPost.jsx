@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useParams } from 'react-router';
-
+import Search from "./Search";
 import EditForm from "./EditForm";
+
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/Users`;
@@ -13,7 +14,7 @@ const config = {
   },
 };
 
-function EditPost(){
+function EditPost(props){
     const { id } = useParams();
     const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -53,6 +54,7 @@ function EditPost(){
 
     return(
         <div>
+          <Search users={props.users} searchField={props.searchField}/>
             <h3>Edit Post</h3>
             <EditForm
                 firstname={firstname}

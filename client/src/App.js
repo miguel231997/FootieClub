@@ -6,7 +6,6 @@ import Post from './components/Post';
 import PostDetails from './components/PostDetails'
 import EditPost from './components/EditPost'
 import { Route } from'react-router-dom';
-import Search from './components/Search';
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -38,22 +37,22 @@ useEffect(() => {
     
     <div className="App">
       <Navbar searchField={searchField} SetSearchField={SetSearchField} />
-      <Search users={users} searchField={searchField}/>
+      {/* <Search users={users} searchField={searchField}/> */}
       
         <Route exact path = "/">
-          <Home/>
+          <Home users={users} searchField={searchField}/>
         </Route>
         <Route exact path = "/feeds">
-          <Feed/>
+          <Feed users={users} searchField={searchField}/>
         </Route>
         <Route exact path = "/feeds/:id">
-          <PostDetails/>
+          <PostDetails users={users} searchField={searchField}/>
         </Route>
         <Route path = "/new">
-          <Post/>
+          <Post users={users} searchField={searchField}/>
         </Route>
         <Route path = "/feeds/:id/edit">
-          <EditPost/>
+          <EditPost users={users} searchField={searchField}/>
           
         </Route>
       

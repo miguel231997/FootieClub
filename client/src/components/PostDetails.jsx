@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom'
+import Search from "./Search";
+
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/Users`;
@@ -12,7 +14,7 @@ const config = {
   },
 };
 
-function PostDetails(){
+function PostDetails(props){
     //const[loading,setLoading]=useState(true);
 const[user,setUser] = useState({});
 const { id } = useParams();
@@ -33,6 +35,7 @@ useEffect(() => {
 
     return (
         <div>
+          <Search users={props.users} searchField={props.searchField}/>
             <div>
                 <h1>{user.fields?.firstname}</h1>
                 <h4>{user.fields?.lastname}</h4>

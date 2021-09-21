@@ -4,6 +4,7 @@ import axios from "axios";
 import thumbsup from './thumbsup.png'
 import './Feed.css';
 import edit from './edit.png';
+import Search from "./Search";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -15,7 +16,7 @@ const config = {
   },
 };
 
-export default function Feed() {
+export default function Feed(props) {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -30,6 +31,8 @@ export default function Feed() {
 
 return (
     <div>
+      <Search users={props.users} searchField={props.searchField}/>
+
       <div>
         {users.map((user) => {
           return (

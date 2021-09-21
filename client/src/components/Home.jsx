@@ -1,10 +1,12 @@
 import './Home.css';
 import logo from './logo.png';
 import 'react-slideshow-image/dist/styles.css';
-import Feed from './Feed';
+//import Feed from './Feed';
+import Search from './Search';
+//import App from '../App';
 import { Link } from "react-router-dom";
 
-function Home() {
+function Home(props) {
     return (
         <div className="parent">
             <div className="child" id="two">
@@ -24,7 +26,7 @@ function Home() {
                 </div>
             <div className="child" id="three">
                 <div>
-                    <Feed />
+                <Search users={props.users} searchField={props.searchField}/>
                  </div>
             </div>
             <div className="child" id="four">
