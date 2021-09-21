@@ -12,6 +12,7 @@ import axios from "axios";
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/Users`;
+const photoURL = `https://api.airtable.com/v0/${airtableBase}/Photos`;
 
 const config = {
   headers: {
@@ -22,6 +23,9 @@ function App() {
 const [users, setUsers] = useState([]);
 const [searchField,SetSearchField] = useState('');
 
+const [photos,setPhotos] = useState([]);
+const [searchPhoto,SetSearchPhoto] = useState('');
+
 useEffect(() => {
   const fetchUsers = async () => {
   const res = await axios.get(URL, config);
@@ -31,14 +35,24 @@ useEffect(() => {
 
   fetchUsers();
 }, []);
+
+useEffect(() => {
+  const fetchPhotos = async () => {
+  const res = await axios.get(photoURL, config);
+  setPhotos(res.data.records);
+  console.log(res.data)
+};
+
+  fetchPhotos();
+}, []);
   
 return (
 
   <div className="App">
-    <Navbar searchField={searchField} SetSearchField={SetSearchField} />
+    <Navbar searchField={searchField} SetSearchField={SetSearchField} searchPhoto={searchPhoto} SetSearchPhoto={SetSearchPhoto} />
       {/* <Search users={users} searchField={searchField}/> */}
         <Route exact path = "/">
-          <Home users={users} searchField={searchField}/>
+          <Home photos={photos} users={users} searchPhoto={searchPhoto}/>
         </Route>
         <Route exact path = "/feeds">
           <Feed users={users} searchField={searchField}/>

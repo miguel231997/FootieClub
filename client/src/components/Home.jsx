@@ -31,7 +31,7 @@ function Home(props) {
                 <div>
                 {/* <Search users={props.users} searchField={props.searchField}/> */}
                 <img id="add" src ={add} />
-                <Photos users={props.users} />
+                <Photos photos={props.photos} />
                  </div>
             </div>
             <div className="child" id="four">
