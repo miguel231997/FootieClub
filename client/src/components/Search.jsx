@@ -14,10 +14,8 @@ function Search(props){
     if(props.searchField.length === 0){
         setFilterUsers([]);
     }else{
-        
-        setFilterUsers(filteredPost);
+      setFilterUsers(filteredPost);
     }
-     //setFilterUsers(filteredPost);
   },[props.searchField])
 
 

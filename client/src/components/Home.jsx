@@ -5,6 +5,8 @@ import 'react-slideshow-image/dist/styles.css';
 import Search from './Search';
 //import App from '../App';
 import { Link } from "react-router-dom";
+import Accounts from './Accounts';
+import Photos from './Photos';
 
 function Home(props) {
     return (
@@ -26,11 +28,12 @@ function Home(props) {
                 </div>
             <div className="child" id="three">
                 <div>
-                <Search users={props.users} searchField={props.searchField}/>
+                {/* <Search users={props.users} searchField={props.searchField}/> */}
+                <Photos users={props.users} />
                  </div>
             </div>
             <div className="child" id="four">
-            4
+            <Accounts users={props.users} />
             </div>
         </div>
 

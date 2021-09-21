@@ -19,26 +19,24 @@ const config = {
   },
 };
 function App() {
-  const [users, setUsers] = useState([]);
+const [users, setUsers] = useState([]);
 const [searchField,SetSearchField] = useState('');
-
 
 useEffect(() => {
   const fetchUsers = async () => {
-    const res = await axios.get(URL, config);
-    setUsers(res.data.records);
-    console.log(res.data)
-  };
+  const res = await axios.get(URL, config);
+  setUsers(res.data.records);
+  console.log(res.data)
+};
 
   fetchUsers();
 }, []);
-  return (
+  
+return (
 
-    
-    <div className="App">
-      <Navbar searchField={searchField} SetSearchField={SetSearchField} />
+  <div className="App">
+    <Navbar searchField={searchField} SetSearchField={SetSearchField} />
       {/* <Search users={users} searchField={searchField}/> */}
-      
         <Route exact path = "/">
           <Home users={users} searchField={searchField}/>
         </Route>
@@ -53,11 +51,8 @@ useEffect(() => {
         </Route>
         <Route path = "/feeds/:id/edit">
           <EditPost users={users} searchField={searchField}/>
-          
         </Route>
-      
-        
-    </div>
+  </div>
   );
 }
 

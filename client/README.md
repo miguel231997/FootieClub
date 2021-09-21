@@ -30,52 +30,6 @@ The Wireframes below depict how all my pages will look. The home page includes E
 
 ### API and Data Samples
 
-<i>The API I will be using is from airtable,epl api, and fpl api<i>
-https://fantasy.premierleague.com/api/fixtures/
-```josn
-
-
-    [
-        {
-        "code": 2210271,
-        "event": 1,
-        "finished": true,
-        "finished_provisional": true,
-        "id": 1,
-        "kickoff_time": "2021-08-13T19:00:00Z",
-        "minutes": 90,
-        "provisional_start_time": false,
-        "started": true,
-        "team_a": 1,
-        "team_a_score": 0,
-        "team_h": 3,
-        "team_h_score": 2
-        
-    },
-        
-
-```
-https://data.football-api.com/v3/standings/1204?Authorization=cfnR6LWc4i4MDFLlPJrajoa465c4qjF594kpIy4b
-```json
-
-{
-    "events": [
-        {
-            "id": 1,
-            "name": "Gameweek 1",
-            "deadline_time": "2021-08-13T17:30:00Z",
-            "average_entry_score": 69,
-            "finished": true,
-            "data_checked": true,
-            "highest_scoring_entry": 5059647,
-            "deadline_time_epoch": 1628875800,
-            "deadline_time_game_offset": 0,
-            "highest_score": 150,
-            "is_previous": false,
-            "is_current": false,
-            "is_next": false,
-
-```
 https://airtable.com/appSZfBB304lCRzUK/api/docs#curl/table:table%201:list
 ```json
 {
@@ -109,8 +63,7 @@ https://airtable.com/appSZfBB304lCRzUK/api/docs#curl/table:table%201:list
 
 #### MVP 
 
-
-- Home page with two external api's
+-add a dark mode feauture
 - a navbar that includes three tabs and a search box
 - route to multiple parts of the site
 - able to get data from airtable, and post to it 
@@ -123,7 +76,6 @@ https://airtable.com/appSZfBB304lCRzUK/api/docs#curl/table:table%201:list
 
 
 - Add a third api to include other soccer league standings
-- include a dark mode version of the site
 - make each post into a modal when clicked on an enlarge button
 - add a background that has animations
 - collaborte with UX design student to make the styling even   better
