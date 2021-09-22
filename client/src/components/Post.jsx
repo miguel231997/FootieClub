@@ -4,6 +4,7 @@ import axios from "axios";
 //import thumbsup from './thumbsup.png'
 import Form from "./Form";
 import Search from "./Search";
+import './Post.css';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -40,9 +41,9 @@ function Post(props){
   };
 
   return (
-    <div>
+    <div className="container">
       <Search users={props.users} searchField={props.searchField}/>
-      <h3>Create a new post</h3>
+      <h3 className="white fw9">Create a new post</h3>
       <Form
         firstname={firstname}
         setFirstName={setFirstName}

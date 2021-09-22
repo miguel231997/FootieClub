@@ -4,6 +4,7 @@
     background: #fff;
     border: 1px solid #dfdfdf;
     margin-top: 40px;
+    
 }
 
 .info{
@@ -45,8 +46,8 @@
 }
 
 .post-image{
-    width: 100%;
-    height: 500px;
+    width: 50%;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -75,3 +76,20 @@
     font-size: 12px;
 }
 
+.reaction-wrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: -20px;
+    align-items: center;
+}
+
+.reaction-wrapper .icon{
+    height: 25px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.reaction-wrapper .icon.save{
+    margin-left: auto;
+}

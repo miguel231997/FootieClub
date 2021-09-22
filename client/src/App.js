@@ -3,11 +3,15 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Feed from './components/Feed';
 import Post from './components/Post';
-import PostDetails from './components/PostDetails'
-import EditPost from './components/EditPost'
+import PostDetails from './components/PostDetails';
+import EditPost from './components/EditPost';
+import NewPhoto from './components/NewPhoto';
 import { Route } from'react-router-dom';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Footer from './components/Footer';
+
+
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -54,6 +58,7 @@ return (
         <Route exact path = "/">
           <Home photos={photos} users={users} searchPhoto={searchPhoto}/>
         </Route>
+        
         <Route exact path = "/feeds">
           <Feed users={users} searchField={searchField}/>
         </Route>
@@ -63,9 +68,13 @@ return (
         <Route path = "/new">
           <Post users={users} searchField={searchField}/>
         </Route>
+        <Route exact path = "/photos">
+          <NewPhoto photos={photos} searchField={searchPhoto}/>
+        </Route>
         <Route path = "/feeds/:id/edit">
           <EditPost users={users} searchField={searchField}/>
         </Route>
+        
   </div>
   );
 }

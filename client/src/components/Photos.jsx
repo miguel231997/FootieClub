@@ -1,7 +1,12 @@
 import './Photos.css';
-import logo from './logo.png';
+import trash from './trash.png';
+import heart from './heart.png';
+
+
 
 function Photos(props){
+  
+
     return (
         <div>
         {props.photos.map((photo) => {
@@ -16,11 +21,14 @@ function Photos(props){
                         <div className="profile-pic"><img src={photo.fields.photoprofilepic} alt=""/></div>
                         <p className="username">{photo.fields.name}</p>
                     </div>
-                    <img src={logo} className="options" alt=""/>
+                    <img src={trash} className="options" alt=""/>
                 </div>
                 <img src={photo.fields.photo} className="post-image" alt=""/>
                 <div className="post-content">
-                    
+                <div class="reaction-wrapper">
+                        <img src={heart} class="save icon" alt=""/>
+                    </div>
+
                     
                     <p className="description"><span>{photo.fields.name} </span> {photo.fields.caption}</p>
                     <p className="post-time">{photo.createdTime}</p>

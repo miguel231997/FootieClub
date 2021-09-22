@@ -1,16 +1,16 @@
 import './Home.css';
 import logo from './logo.png';
 import 'react-slideshow-image/dist/styles.css';
-//import Feed from './Feed';
-import Search from './Search';
-//import App from '../App';
 import { Link } from "react-router-dom";
 import Accounts from './Accounts';
 import Photos from './Photos';
 import add from './add.png'
 
+
+
 function Home(props) {
     return (
+        <div>
         <div className="parent">
             <div className="child" id="two">
                 <img id="logo" src ={logo} />
@@ -30,7 +30,7 @@ function Home(props) {
             <div className="child" id="three">
                 <div>
                 {/* <Search users={props.users} searchField={props.searchField}/> */}
-                <img id="add" src ={add} />
+                <Link to ="/photos"><img id="add" src ={add} /></Link>
                 <Photos photos={props.photos} />
                  </div>
             </div>
@@ -38,6 +38,8 @@ function Home(props) {
             <Accounts users={props.users} />
             </div>
         </div>
+        </div>
+        
 
     )
 }
