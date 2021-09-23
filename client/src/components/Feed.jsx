@@ -5,6 +5,7 @@ import thumbsup from './thumbsup.png'
 import './Feed.css';
 import edit from './edit.png';
 import Search from "./Search";
+import { useParams } from 'react-router';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -18,6 +19,7 @@ const config = {
 
 export default function Feed(props) {
   const [users, setUsers] = useState([]);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -27,7 +29,21 @@ export default function Feed(props) {
     };
 
     fetchUsers();
-}, []);
+}, [toggle]);
+
+
+const handleClick = async (event) => {
+  const userId = event.target.dataset.userid;
+  const likes = Number(event.target.dataset.likes);
+  console.log(userId);
+  const fields = {
+      likes: likes + 1
+    };
+  const res = await axios.patch(`${URL}/${userId}`, { fields }, config);
+  setToggle(prevToggle =>!prevToggle);
+//toast("Updated Status");
+//history.push(`/feeds/${res.data.id}`);
+}
 
 return (
     <div>
@@ -49,7 +65,8 @@ return (
                                 <p>{user.fields.post}</p>
                                   <hr/>
                                     <div className ="reaction-bar">
-                                    <img className="thumbsup" src={thumbsup}></img>
+                                    <img data-likes={user.fields.likes} data-userid={user.id} className="thumbsup" src={thumbsup} onClick={event => handleClick(event)}></img>
+                                   {user.fields.likes === 0 ? (<span className="pl1 gray b"></span>) : (<span className="pl1 gray b">{user.fields.likes}</span>)}
                                   </div>
                                 <div className="edit">
                               <Link to ={`/feeds/${user.id}`} key={user.id}><img className="edit-pic" src={edit}></img>

@@ -55,6 +55,7 @@ return (
   <div className="App">
     <Navbar searchField={searchField} SetSearchField={SetSearchField}/>
       {/* <Search users={users} searchField={searchField}/> */}
+      <div className="">
         <Route exact path = "/">
           <Home photos={photos} users={users} searchPhoto={searchPhoto} searchField={searchField}/>
         </Route>
@@ -74,7 +75,10 @@ return (
         <Route path = "/feeds/:id/edit">
           <EditPost users={users} searchField={searchField}/>
         </Route>
+        </div>
+        <div>
         <Footer/>
+        </div>
   </div>
   );
 }

@@ -79,3 +79,7 @@ body {
   .feed-divider{
     border-top: .5px solid black;
   }
+
+  .thumbsup{
+    cursor: pointer;
+  }

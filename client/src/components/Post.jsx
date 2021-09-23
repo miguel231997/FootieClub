@@ -22,6 +22,7 @@ function Post(props){
   const [favoriteteam, setFavoriteTeam] = useState("");
   const [profilepic, setProfilePic] = useState("");
   const [post, setPost] = useState("");
+  const[likes, setLikes] = useState(0)
   
   //const history = useHistory();
   const handleSubmit = async (e) => {
@@ -32,6 +33,7 @@ function Post(props){
       favoriteteam,
       profilepic,
       post,
+      likes,
     };
 
     const res = await axios.post(URL, { fields }, config);
@@ -41,7 +43,7 @@ function Post(props){
   };
 
   return (
-    <div>
+    
     <div className="container">
       <Search users={props.users} searchField={props.searchField}/>
       <h3 className="white fw9">Create a new post</h3>
@@ -60,7 +62,7 @@ function Post(props){
         type={"Create"}
       />
     </div>
-    </div>
+    
   );
           };
 
