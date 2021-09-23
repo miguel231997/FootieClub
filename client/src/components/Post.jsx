@@ -41,6 +41,7 @@ function Post(props){
   };
 
   return (
+    <div>
     <div className="container">
       <Search users={props.users} searchField={props.searchField}/>
       <h3 className="white fw9">Create a new post</h3>
@@ -58,6 +59,7 @@ function Post(props){
         handleSubmit={handleSubmit}
         type={"Create"}
       />
+    </div>
     </div>
   );
           };

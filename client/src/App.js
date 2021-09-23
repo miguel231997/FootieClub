@@ -56,7 +56,7 @@ return (
     <Navbar searchField={searchField} SetSearchField={SetSearchField} searchPhoto={searchPhoto} SetSearchPhoto={SetSearchPhoto} />
       {/* <Search users={users} searchField={searchField}/> */}
         <Route exact path = "/">
-          <Home photos={photos} users={users} searchPhoto={searchPhoto}/>
+          <Home photos={photos} users={users} searchPhoto={searchPhoto} searchField={searchField}/>
         </Route>
         
         <Route exact path = "/feeds">
@@ -74,7 +74,7 @@ return (
         <Route path = "/feeds/:id/edit">
           <EditPost users={users} searchField={searchField}/>
         </Route>
-        
+        <Footer/>
   </div>
   );
 }

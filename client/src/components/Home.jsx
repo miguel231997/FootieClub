@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Accounts from './Accounts';
 import Photos from './Photos';
 import add from './add.png'
+import Search from './Search';
 
 
 
@@ -28,13 +29,14 @@ function Home(props) {
                 
                 </div>
             <div className="child" id="three">
-                <div>
-                {/* <Search users={props.users} searchField={props.searchField}/> */}
+                <div className="photo-container">
+                <Search users={props.users} searchField={props.searchField}/>
                 <Link to ="/photos"><img id="add" src ={add} /></Link>
                 <Photos photos={props.photos} />
                  </div>
             </div>
             <div className="child" id="four">
+                <p>Online Users</p>
             <Accounts users={props.users} />
             </div>
         </div>

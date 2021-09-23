@@ -6,7 +6,7 @@ import SearchBar from './SearchBar';
 
 function Navbar(props){
 return (
-    <nav className="navbar bg-blue w-100">
+    <nav className="navbar w-100">
         <div>
             <h1 className="fw9 white">FootieClub</h1>
          <div className="form center">

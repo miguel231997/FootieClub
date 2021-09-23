@@ -1,8 +1,8 @@
 import React from "react";
-//import './Footer.css'
+import './Footer.css'
 const Footer = () => {
   return (
-    <div className=" bg-blue footer">
+    <div className="footer">
       &copy; Miguel Galindo
       <div className="links">
         <a href="https://www.linkedin.com/in/miguelgg/" target="_blank" rel="noreferrer">

@@ -23,7 +23,7 @@ export default function Form(props) {
         />
         <br />
         <label className="white db fw6 lh-copy f6">Profile Pic</label>
-        <input className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
+        <input placeholder="link only" className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
           type="url"
           value={props.profilepic}
           onChange={(e) => props.setProfilePic(e.target.value)}

@@ -8,7 +8,7 @@ function Accounts(props){
                 <div className="information">
                   <img className ="avatar" src={user.fields.profilepic} alt="profile pic"></img>
                     <div className="timestamp">
-                      <h4>{user.fields.firstname} {user.fields.lastname}</h4>
+                      <h4 className="green">{user.fields.firstname} {user.fields.lastname}</h4>
                     </div>
                   </div>
                 </div>

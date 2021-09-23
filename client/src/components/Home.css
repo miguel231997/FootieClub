@@ -1,8 +1,14 @@
+
+.photo-container{
+  background: #AAB8C2;
+}
+
 .parent {
     display: grid;
-    grid-template-rows: 100px 600px 100px;
+    grid-template-rows: 15% 70% 15%;
     grid-template-columns: 1fr 3fr 1fr;
     padding-top: 30px;
+    background: #AAB8C2;
     
   }
 .parent {
@@ -11,6 +17,7 @@
       "H F A A"
       "H F A A"
       "H F A A";
+      
   }
   #two {
     grid-area: H;
@@ -19,10 +26,14 @@
   
   #three {
     grid-area: F;
+
   }
   
   #four {
     grid-area: A;
+    position: fixed;
+    right: 0;
+    
   }
   
   #two {
@@ -38,7 +49,7 @@
   }
   
   #four {
-    background-color: #eee;
+    background-color: #E1E8ED;
   }
 
   #logo{
@@ -75,6 +86,15 @@
     #four{
       display: none;
     }
+    #two{
+      display: none;
+    }
+    
+    .parent {
+      display: flex;
+      
+    }
+    
   }
 
   @media only screen and (max-width: 320px){ 
@@ -82,4 +102,48 @@
       width: 50px;
       height: 50px;
     }
+    #two{
+      display: none;
+    }
+    #four{
+      display: none;
+    }
+    
+    .parent {
+      display: flex;
+      
+    }
+    
   }
+
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+#two{
+  display: none;
+}
+
+.parent {
+  display: flex;
+  
+}
+#four{
+  display: none;
+}
+
+    }
+
+    @media(max-width: 320px){ 
+      #two{
+        display: none;
+      }
+      
+      .parent {
+        display: flex;
+        
+      }
+      #four{
+        display: none;
+      }
+    }

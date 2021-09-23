@@ -5,6 +5,7 @@ import axios from "axios";
 import Form from "./Form";
 // import Search from "./Search";
 import PhotoForm from  "./PhotoForm";
+import './NewPhoto.css';
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -39,9 +40,9 @@ function Post(){
   };
 
   return (
-    <div>
+    <div className="box">
       {/* <Search users={props.users} searchField={props.searchField}/> */}
-      <h3>Add a new photo</h3>
+      <h3 className="white fw9">Add a new photo</h3>
       <PhotoForm
         name={name}
         setName={setName}
