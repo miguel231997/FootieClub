@@ -5,7 +5,65 @@
     width: 100%;
     background: #1DA1F2;
     
-  
-    
-    
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+      .footer{
+        
+        position: sticky;
+        padding: 1rem;
+        bottom: 0;
+        width: 100%;
+        background: black;
+        
+        
+
+    }
   }
+
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .post{
+        width: 85%;
+        height: auto;
+        background: #14171A;
+        border: 1px solid #dfdfdf;
+        margin-top: 40px;
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer{
+        
+    position: sticky;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    
+    
+
+}
+  
+}
+
+@media only screen and (max-width: 320px){ 
+  .footer{
+        
+    position: sticky;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    
+    
+
+}
+  
+}

@@ -55,7 +55,7 @@ function EditPost(props){
     return(
         <div>
           <Search users={props.users} searchField={props.searchField}/>
-            <h3>Edit Post</h3>
+            <h3 className="black">Edit Post</h3>
             <EditForm
                 firstname={firstname}
                 setFirstName={setFirstName}

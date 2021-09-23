@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 //import thumbsup from './thumbsup.png'
 import Form from "./Form";
-// import Search from "./Search";
+import Search from "./Search";
 import PhotoForm from  "./PhotoForm";
 import './NewPhoto.css';
 
@@ -17,7 +17,7 @@ const config = {
   },
 };
 
-function Post(){
+function Post(props){
     const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
   const [caption, setCaption] = useState("");
@@ -41,7 +41,7 @@ function Post(){
 
   return (
     <div className="box">
-      {/* <Search users={props.users} searchField={props.searchField}/> */}
+      <Search users={props.users} searchField={props.searchField}/>
       <h3 className="white fw9">Add a new photo</h3>
       <PhotoForm
         name={name}

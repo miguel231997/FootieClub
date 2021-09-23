@@ -53,7 +53,7 @@ useEffect(() => {
 return (
 
   <div className="App">
-    <Navbar searchField={searchField} SetSearchField={SetSearchField} searchPhoto={searchPhoto} SetSearchPhoto={SetSearchPhoto} />
+    <Navbar searchField={searchField} SetSearchField={SetSearchField}/>
       {/* <Search users={users} searchField={searchField}/> */}
         <Route exact path = "/">
           <Home photos={photos} users={users} searchPhoto={searchPhoto} searchField={searchField}/>
@@ -69,7 +69,7 @@ return (
           <Post users={users} searchField={searchField}/>
         </Route>
         <Route exact path = "/photos">
-          <NewPhoto photos={photos} searchField={searchPhoto}/>
+          <NewPhoto users={users} searchField={searchField}/>
         </Route>
         <Route path = "/feeds/:id/edit">
           <EditPost users={users} searchField={searchField}/>

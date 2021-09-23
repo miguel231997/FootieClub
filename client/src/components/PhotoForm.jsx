@@ -23,7 +23,7 @@ function PhotoForm(props){
           />
           <br />
           <label className="f6 b db mb2">Caption</label>
-          <input placeholder="What's on your mind?" className="center db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"
+          <input placeholder="Write a caption" className="center db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2"
             type="text"
             value={props.caption}
             onChange={(e) => props.setCaption(e.target.value)}
