@@ -48,6 +48,7 @@ function Post(props){
       <Search users={props.users} searchField={props.searchField}/>
       <h3 className="white fw9">Create a new post</h3>
       <Form
+        setLikes={setLikes}
         firstname={firstname}
         setFirstName={setFirstName}
         lastname={lastname}
