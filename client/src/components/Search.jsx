@@ -16,6 +16,7 @@ function Search(props){
     }else{
       setFilterUsers(filteredPost);
     }
+    // eslint-disable-next-line
   },[props.searchField])
 
 
@@ -26,24 +27,24 @@ function Search(props){
             <div className="post-container">
               <div className="posts">
                 <div className="information">
-                  <img className ="avatar" src={user.fields.profilepic} alt="profile pic"></img>
+                  <img className ="avatar" src={user.fields?.profilepic} alt="profile pic"></img>
                     <div className="timestamp">
-                      <h4>{user.fields.firstname} {user.fields.lastname}</h4>
+                      <h4>{user.fields?.firstname} {user.fields?.lastname}</h4>
                         <p className="time"><small>{user.createdTime}</small></p>
                           </div>
                             </div>
                               <div className = "post-text">
-                                <p>{user.fields.post}</p>
+                                <p>{user.fields?.post}</p>
                                   <hr/>
                                     <div className ="reaction-bar">
-                                    <img className="thumbsup" src={thumbsup}></img>
+                                    <img alt="" className="thumbsup" src={thumbsup}></img>
                                   </div>
                                 <div className="edit">
-                              <Link to ={`/feeds/${user.id}`} key={user.id}><img className="edit-pic" src={edit}></img>
+                              <Link to ={`/feeds/${user.id}`} key={user.id}><img alt="" className="edit-pic" src={edit}></img>
                             </Link>
                           </div>
                         <div className="favoriteteam">
-                      <h6>{user.fields.favoriteteam}</h6>
+                      <h6>{user.fields?.favoriteteam}</h6>
                     </div>
                   </div>
                 </div>

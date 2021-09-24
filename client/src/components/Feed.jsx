@@ -5,7 +5,7 @@ import thumbsup from './thumbsup.png'
 import './Feed.css';
 import edit from './edit.png';
 import Search from "./Search";
-import { useParams } from 'react-router';
+import { useHistory } from "react-router";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -18,6 +18,7 @@ const config = {
 };
 
 export default function Feed(props) {
+  const history = useHistory();
   const [users, setUsers] = useState([]);
   const [toggle, setToggle] = useState(false);
 
@@ -29,6 +30,7 @@ export default function Feed(props) {
     };
 
     fetchUsers();
+    // eslint-disable-next-line
 }, [toggle]);
 
 
@@ -42,7 +44,7 @@ const handleClick = async (event) => {
   const res = await axios.patch(`${URL}/${userId}`, { fields }, config);
   setToggle(prevToggle =>!prevToggle);
 //toast("Updated Status");
-//history.push(`/feeds/${res.data.id}`);
+history.push(`/feeds/${res.data.id}`);
 }
 
 return (
@@ -51,7 +53,9 @@ return (
 
       <div>
         {users.map((user) => {
+          
           return (
+            
             <div className="post-container">
               <div className="posts">
                 <div className="information">
@@ -65,11 +69,11 @@ return (
                                 <p>{user.fields.post}</p>
                                   <hr/>
                                     <div className ="reaction-bar">
-                                    <img data-likes={user.fields.likes} data-userid={user.id} className="thumbsup" src={thumbsup} onClick={event => handleClick(event)}></img>
+                                    <img alt="" data-likes={user.fields.likes} data-userid={user.id} className="thumbsup" src={thumbsup} onClick={event => handleClick(event)}></img>
                                    {user.fields.likes === 0 ? (<span className="pl1 gray b"></span>) : (<span className="pl1 gray b">{user.fields.likes}</span>)}
                                   </div>
                                 <div className="edit">
-                              <Link to ={`/feeds/${user.id}`} key={user.id}><img className="edit-pic" src={edit}></img>
+                              <Link to ={`/feeds/${user.id}`} key={user.id}><img alt="" className="edit-pic" src={edit}></img>
                             </Link>
                           </div>
                         <div className="favoriteteam">

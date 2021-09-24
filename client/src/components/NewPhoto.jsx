@@ -1,11 +1,9 @@
 import { useState } from "react";
-//import { Link } from "react-router-dom";
 import axios from "axios";
-//import thumbsup from './thumbsup.png'
-import Form from "./Form";
 import Search from "./Search";
 import PhotoForm from  "./PhotoForm";
 import './NewPhoto.css';
+import { useHistory } from "react-router";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -23,7 +21,7 @@ function Post(props){
   const [caption, setCaption] = useState("");
   const [photoprofilepic, setPhotoProfilePic] = useState("");
   
-  //const history = useHistory();
+  const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
@@ -35,7 +33,7 @@ function Post(props){
 
     const res = await axios.post(photoURL, { fields }, config);
     //toast("Created Team");
-    //history.push('/teams');
+    history.push('/teams');
     console.log(res.data);
   };
 

@@ -10,6 +10,24 @@
     width: 700px;
 }
 
+.nav-icons{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#header-home{
+    width: 20px;
+    height: 20px;
+}
+#header-feed{
+    width: 20px;
+    height: 20px;
+}
+#header-new{
+    width: 20px;
+    height: 20px;
+}
+
 @media only screen and (max-width: 600px) {
     .form{
         width: 350px;

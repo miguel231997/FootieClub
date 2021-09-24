@@ -28,7 +28,7 @@ const [users, setUsers] = useState([]);
 const [searchField,SetSearchField] = useState('');
 
 const [photos,setPhotos] = useState([]);
-const [searchPhoto,SetSearchPhoto] = useState('');
+
 
 useEffect(() => {
   const fetchUsers = async () => {
@@ -38,6 +38,7 @@ useEffect(() => {
 };
 
   fetchUsers();
+  // eslint-disable-next-line
 }, []);
 
 useEffect(() => {
@@ -57,7 +58,7 @@ return (
       {/* <Search users={users} searchField={searchField}/> */}
       <div className="">
         <Route exact path = "/">
-          <Home photos={photos} users={users} searchPhoto={searchPhoto} searchField={searchField}/>
+          <Home photos={photos} users={users} searchField={searchField}/>
         </Route>
         
         <Route exact path = "/feeds">

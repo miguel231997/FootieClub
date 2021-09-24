@@ -1,10 +1,9 @@
 import { useState } from "react";
-//import { Link } from "react-router-dom";
 import axios from "axios";
-//import thumbsup from './thumbsup.png'
 import Form from "./Form";
 import Search from "./Search";
 import './Post.css';
+import { useHistory } from "react-router";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -24,7 +23,7 @@ function Post(props){
   const [post, setPost] = useState("");
   const[likes, setLikes] = useState(0)
   
-  //const history = useHistory();
+  const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
@@ -38,7 +37,8 @@ function Post(props){
 
     const res = await axios.post(URL, { fields }, config);
     //toast("Created Team");
-    //history.push('/teams');
+    // eslint-disable-next-line
+    history.push('/feeds');
     console.log(res.data);
   };
 

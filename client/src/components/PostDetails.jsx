@@ -47,7 +47,7 @@ useEffect(() => {
                 <br/>
                 
                 <br/>
-                <Link to ={`/feeds/${user.id}/edit`}className="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">edit Team</Link>
+                <Link to ={`/feeds/${user.id}/edit`} key={user.id} className="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">edit Team</Link>
               
             </div>
         </div>

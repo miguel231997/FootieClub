@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router';
 import Search from "./Search";
 import EditForm from "./EditForm";
+import { useHistory } from "react-router";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -16,6 +17,7 @@ const config = {
 
 function EditPost(props){
     const { id } = useParams();
+    const history = useHistory();
     const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [favoriteteam, setFavoriteTeam] = useState("");
@@ -49,7 +51,7 @@ function EditPost(props){
         };
         const res = await axios.put(`${URL}/${id}`, { fields }, config);
     //toast("Updated Team");
-    //history.push(`/teams/${res.data.id}`);
+    history.push(`/feeds/${res.data.id}`);
     }
 
     return(

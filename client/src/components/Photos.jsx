@@ -26,7 +26,7 @@ function Photos(props){
                 <img src={photo.fields.photo} className="post-image" alt=""/>
                 <div className="post-content">
                 <div class="reaction-wrapper">
-                        <img src={heart} class="save icon" alt=""/>
+                        <img src={heart} className="save icon" alt=""/>
                     </div>
 
                     
@@ -46,21 +46,3 @@ function Photos(props){
 }
 
 export default Photos;
-
-{/* <div>
-        {props.photos.map((photo) => {
-          return (
-            <div className="post-container pa2">
-              
-                <div className="information">
-                  <img className ="avatar" src={photo.fields.photoprofilepic} alt="profile pic"></img>
-                    <div className="timestamp">
-                      <h4>{photo.fields.name}</h4>
-                    </div>
-                  </div>
-                </div>
-              
-            );
-        })}
-      </div>
-    ) */}
