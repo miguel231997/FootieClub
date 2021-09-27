@@ -56,7 +56,7 @@ return (
   <div className="App">
     <Navbar searchField={searchField} SetSearchField={SetSearchField}/>
       {/* <Search users={users} searchField={searchField}/> */}
-      <div className="">
+      <div>
         <Route exact path = "/">
           <Home photos={photos} users={users} searchField={searchField}/>
         </Route>

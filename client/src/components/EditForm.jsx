@@ -1,7 +1,7 @@
 export default function Form(props) {
   return (
     <form className=" center pa5 br2-ns b--black-10" onSubmit={props.handleSubmit}>
-      <label className="white db fw6 lh-copy f6">First Name</label>
+      <label className="white db fw6 lh-copy f6"></label>
       <input className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
         disabled={true}
         type="text"
@@ -9,7 +9,8 @@ export default function Form(props) {
         onChange={(e) => props.setFirstName(e.target.value)}
       />
       <br />
-      <label className="white db fw6 lh-copy f6">Last Name</label>
+      <br />
+      <label className="white db fw6 lh-copy f6"></label>
       <input className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
         disabled={true}
         type="text"
@@ -17,7 +18,8 @@ export default function Form(props) {
         onChange={(e) => props.setLastName(e.target.value)}
       />
       <br />
-      <label className="white db fw6 lh-copy f6">Favorite Team</label>
+      <br />
+      <label className="white db fw6 lh-copy f6"></label>
       <input className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
         disabled={true}
         type="text"
@@ -25,7 +27,8 @@ export default function Form(props) {
         onChange={(e) => props.setFavoriteTeam(e.target.value)}
       />
       <br />
-      <label className="white db fw6 lh-copy f6">Profile Pic</label>
+      <br />
+      <label className="db fw6 lh-copy f6">Profile Pic</label>
       <input className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
         type="url"
         value={props.profilepic}

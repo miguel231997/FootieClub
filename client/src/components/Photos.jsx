@@ -11,7 +11,7 @@ function Photos(props){
         <div className="photo-div">
         {props.photos.map((photo) => {
           return (
-            <section className="main">
+            <section key={photo.id} className="main">
     <div className="wrapper">
         <div className="left-col">
 
@@ -25,7 +25,7 @@ function Photos(props){
                 </div>
                 <img src={photo.fields.photo} className="post-image" alt=""/>
                 <div className="post-content">
-                <div class="reaction-wrapper">
+                <div className="reaction-wrapper">
                         <img src={heart} className="save icon" alt=""/>
                     </div>
 

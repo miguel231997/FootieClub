@@ -3,7 +3,7 @@ function Accounts(props){
         <div>
         {props.users.map((user) => {
           return (
-            <div className="post-container pa2">
+            <div key={user.id} className="post-container pa2">
               
                 <div className="information">
                   <img className ="avatar" src={user.fields.profilepic} alt="profile pic"></img>

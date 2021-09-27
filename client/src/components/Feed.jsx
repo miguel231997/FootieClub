@@ -56,7 +56,7 @@ return (
           
           return (
             
-            <div className="post-container">
+            <div key={user.id} className="post-container">
               <div className="posts">
                 <div className="information">
                   <img className ="avatar" src={user.fields.profilepic} alt="profile pic"></img>
