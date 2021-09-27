@@ -23,6 +23,7 @@ function EditPost(props){
   const [favoriteteam, setFavoriteTeam] = useState("");
   const [profilepic, setProfilePic] = useState("");
   const [post, setPost] = useState("");
+  const [likes,setLikes] = useState(0)
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -34,6 +35,7 @@ function EditPost(props){
           setFirstName(fields.firstname)
           setLastName(fields.lastname)
           setFavoriteTeam(fields.favoriteteam)
+          setLikes(fields.likes)
         };
     
         fetchUser();
@@ -48,6 +50,7 @@ function EditPost(props){
             favoriteteam,
             profilepic,
             post,
+            likes,
         };
         const res = await axios.put(`${URL}/${id}`, { fields }, config);
     //toast("Updated Team");
@@ -59,6 +62,8 @@ function EditPost(props){
           <Search users={props.users} searchField={props.searchField}/>
             <h3 className="black">Edit Post</h3>
             <EditForm
+              likes={likes}
+              setLikes={setLikes}
                 firstname={firstname}
                 setFirstName={setFirstName}
                 lastname={lastname}

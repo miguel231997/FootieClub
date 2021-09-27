@@ -16,6 +16,9 @@ function Search(props){
     }else{
       setFilterUsers(filteredPost);
     }
+    if(props.searchField!==filteredPost){
+      console.log("hi")
+    }
     // eslint-disable-next-line
   },[props.searchField])
 
@@ -24,7 +27,7 @@ function Search(props){
         <div>
             {filterUsers.map((user)=>{
                 return (
-            <div className="post-container">
+            <div key={user.id} className="post-container">
               <div className="posts">
                 <div className="information">
                   <img className ="avatar" src={user.fields?.profilepic} alt="profile pic"></img>
@@ -38,6 +41,7 @@ function Search(props){
                                   <hr/>
                                     <div className ="reaction-bar">
                                     <img alt="" className="thumbsup" src={thumbsup}></img>
+                                    <span className="pl1 gray b">{user.fields.likes}</span>
                                   </div>
                                 <div className="edit">
                               <Link to ={`/feeds/${user.id}`} key={user.id}><img alt="" className="edit-pic" src={edit}></img>
