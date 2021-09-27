@@ -16,9 +16,6 @@ function Search(props){
     }else{
       setFilterUsers(filteredPost);
     }
-    if(props.searchField!==filteredPost){
-      console.log("hi")
-    }
     // eslint-disable-next-line
   },[props.searchField])
 
@@ -41,7 +38,6 @@ function Search(props){
                                   <hr/>
                                     <div className ="reaction-bar">
                                     <img alt="" className="thumbsup" src={thumbsup}></img>
-                                    <span className="pl1 gray b">{user.fields.likes}</span>
                                   </div>
                                 <div className="edit">
                               <Link to ={`/feeds/${user.id}`} key={user.id}><img alt="" className="edit-pic" src={edit}></img>
