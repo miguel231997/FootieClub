@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       &copy; Miguel Galindo
       <div className="links">
-        <a href="https://www.linkedin.com/in/miguelgg/" target="_blank" rel="noreferrer">
+        <a href="https://github.com/miguel231997" target="_blank" rel="noreferrer">
           <img
             src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/github_fpykxh.png"
             alt="GitHub Logo"

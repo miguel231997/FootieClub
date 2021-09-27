@@ -1,6 +1,6 @@
 function PhotoForm(props){
     return (
-        <form className=" center pa5 br2-ns b--black-10" onSubmit={props.handleSubmit}>
+        <form className="vh-100 center pa5 br2-ns b--black-10" onSubmit={props.handleSubmit}>
           <label className="white db fw6 lh-copy f6">Name</label>
           <input placeholder="full name" className="pa2 input-reset ba bg-white hover-bg-black hover-white w-15"
             type="text"

@@ -5,7 +5,7 @@ import thumbsup from './thumbsup.png'
 import './Feed.css';
 import edit from './edit.png';
 import Search from "./Search";
-import { useHistory } from "react-router";
+
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -18,7 +18,7 @@ const config = {
 };
 
 export default function Feed(props) {
-  const history = useHistory();
+  
   const [users, setUsers] = useState([]);
   const [toggle, setToggle] = useState(false);
 
@@ -43,8 +43,8 @@ const handleClick = async (event) => {
     };
   const res = await axios.patch(`${URL}/${userId}`, { fields }, config);
   setToggle(prevToggle =>!prevToggle);
-//toast("Updated Status");
-history.push(`/feeds/${res.data.id}`);
+    console.log(res);
+
 }
 
 return (

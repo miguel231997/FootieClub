@@ -33,7 +33,7 @@ function Post(props){
 
     const res = await axios.post(photoURL, { fields }, config);
     //toast("Created Team");
-    history.push('/teams');
+    history.push('/');
     console.log(res.data);
   };
 

@@ -36,7 +36,7 @@ useEffect(() => {
     return (
         <div>
           <Search users={props.users} searchField={props.searchField}/>
-            <div>
+            <div className="vh-100">
                 <h1 className="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib dark-blue">Name: {user.fields?.firstname}</h1>
                 <br/>
                 <h4 className="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib dark-blue">Last Name: {user.fields?.lastname}</h4>
@@ -47,7 +47,7 @@ useEffect(() => {
                 <br/>
                 
                 <br/>
-                <Link to ={`/feeds/${user.id}/edit`} key={user.id} className="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">edit Team</Link>
+                <Link to ={`/feeds/${user.id}/edit`} key={user.id} className="f6 link dim ph3 pv2 mb2 dib white bg-dark-gray">Edit this Post</Link>
               
             </div>
         </div>
